@@ -2,10 +2,6 @@
   "name": "turborepo-boilerplate",
   "version": "0.0.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
     "prepare": "husky install",
     "build": "turbo build",
@@ -69,9 +65,5 @@
     "tsup": "6.5.0",
     "turbo": "1.7.0",
     "typescript": "4.9.4"
-  },
-  "engines": {
-    "npm": ">=8.19.3",
-    "node": ">=18.13.0"
   }
 }
