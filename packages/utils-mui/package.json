@@ -20,5 +20,8 @@
   },
   "devDependencies": {
     "config-tsconfig": "*"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.10.5"
   }
 }

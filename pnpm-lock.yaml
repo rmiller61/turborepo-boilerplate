@@ -219,7 +219,10 @@ importers:
 
   packages/utils-mui:
     specifiers:
+      '@emotion/cache': ^11.10.5
       config-tsconfig: '*'
+    dependencies:
+      '@emotion/cache': 11.10.5
     devDependencies:
       config-tsconfig: link:../config-tsconfig
 
