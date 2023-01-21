@@ -27,6 +27,7 @@
     "chalk": "5.2.0",
     "config-storybook": "*",
     "config-tsconfig": "*",
+    "eslint-config-base": "*",
     "openapi-typescript": "6.1.0",
     "utils-test": "*"
   }

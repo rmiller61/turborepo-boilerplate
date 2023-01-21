@@ -23,6 +23,7 @@
   "devDependencies": {
     "config-storybook": "*",
     "config-tsconfig": "*",
+    "eslint-config-base": "*",
     "utils-test": "*"
   }
 }

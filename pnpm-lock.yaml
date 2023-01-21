@@ -31,7 +31,9 @@ importers:
       '@types/react-dom': 18.0.10
       axios: 1.2.2
       commitizen: 4.2.6
+      config-tsconfig: workspace:*
       date-fns: 2.29.3
+      eslint-config-base: workspace:*
       husky: 8.0.3
       lint-staged: 13.1.0
       next: 13.1.2
@@ -83,6 +85,8 @@ importers:
       '@types/react': 18.0.26
       '@types/react-dom': 18.0.10
       commitizen: 4.2.6
+      config-tsconfig: link:packages/config-tsconfig
+      eslint-config-base: link:packages/config-eslint
       husky: 8.0.3
       lint-staged: 13.1.0
       prettier: 2.8.2
@@ -100,6 +104,7 @@ importers:
       config-mui: '*'
       config-storybook: '*'
       config-tsconfig: '*'
+      eslint-config-base: '*'
       openapi-typescript: 6.1.0
       react-parallax-tilt: 1.7.88
       ui: '*'
@@ -116,6 +121,7 @@ importers:
       chalk: 5.2.0
       config-storybook: link:../../packages/config-storybook
       config-tsconfig: link:../../packages/config-tsconfig
+      eslint-config-base: 1.0.0
       openapi-typescript: 6.1.0
       utils-test: 0.2.2
 
@@ -124,6 +130,7 @@ importers:
       config-mui: '*'
       config-storybook: '*'
       config-tsconfig: '*'
+      eslint-config-base: '*'
       ui: '*'
       utils-mui: '*'
       utils-test: '*'
@@ -136,6 +143,7 @@ importers:
     devDependencies:
       config-storybook: link:../../packages/config-storybook
       config-tsconfig: link:../../packages/config-tsconfig
+      eslint-config-base: 1.0.0
       utils-test: 0.2.2
 
   packages/config-eslint:
@@ -9765,6 +9773,13 @@ packages:
       optionator: 0.8.3
     optionalDependencies:
       source-map: 0.6.1
+    dev: true
+
+  /eslint-config-base/1.0.0:
+    resolution:
+      { integrity: sha512-bhMfvhajMURYRoNAZCC7w9rzUfGtSvN6Y8Ev9EA6Cv1Vdn1zAFZDD+dsXSFYmPwOTg/kPPlVHmvmL7UbOoIixw== }
+    dependencies:
+      lodash: 4.17.21
     dev: true
 
   /eslint-config-prettier/8.6.0_eslint@8.31.0:
