@@ -3,7 +3,7 @@ import { shouldForwardProp } from 'utils-mui';
 
 import { ButtonProps } from './';
 
-export const ButtonStyled = styled(Button, {
+export const ButtonStyled: unknown = styled(Button, {
   shouldForwardProp: (prop) => shouldForwardProp<ButtonProps>(['isDisabled', 'bgColor'], prop),
 })<ButtonProps>(({ theme, isDisabled, size, bgColor }) => ({
   width: isDisabled ? '100%' : undefined,
