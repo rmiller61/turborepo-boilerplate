@@ -37,7 +37,10 @@ module.exports = {
     '@typescript-eslint/ban-types': 'error',
     '@typescript-eslint/prefer-nullish-coalescing': 'error',
     '@typescript-eslint/no-unnecessary-condition': 'error',
-
+    '@typescript-eslint/no-unsafe-call': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-member-access': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
     'jsx-a11y/anchor-is-valid': ['off'],
 
     'jest/valid-title': [

@@ -17,18 +17,18 @@
     "api-generate-petstore": "ts-node-esm -P tsconfig.esm.json ./src/common/api/petstore/generate/index.mts && npm run format-fix"
   },
   "dependencies": {
-    "config-mui": "*",
+    "config-mui": "workspace:*",
     "react-parallax-tilt": "1.7.88",
-    "ui": "*",
-    "utils-mui": "*",
-    "utils-version": "*"
+    "ui": "workspace:*",
+    "utils-mui": "workspace:*",
+    "utils-version": "workspace:*"
   },
   "devDependencies": {
     "chalk": "5.2.0",
-    "config-storybook": "*",
-    "config-tsconfig": "*",
-    "eslint-config-base": "*",
+    "config-storybook": "workspace:*",
+    "config-tsconfig": "workspace:*",
+    "eslint-config-base": "workspace:*",
     "openapi-typescript": "6.1.0",
-    "utils-test": "*"
+    "utils-test": "workspace:*"
   }
 }

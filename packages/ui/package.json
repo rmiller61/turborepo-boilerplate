@@ -22,13 +22,13 @@
     "update-dependencies": "npx npm-check-updates -u"
   },
   "dependencies": {
-    "config-mui": "*",
-    "utils-mui": "*",
-    "utils-version": "*"
+    "config-mui": "workspace:*",
+    "utils-mui": "workspace:*",
+    "utils-version": "workspace:*"
   },
   "devDependencies": {
-    "config-storybook": "*",
-    "config-tsconfig": "*",
-    "utils-test": "*"
+    "config-storybook": "workspace:*",
+    "config-tsconfig": "workspace:*",
+    "utils-test": "workspace:*"
   }
 }

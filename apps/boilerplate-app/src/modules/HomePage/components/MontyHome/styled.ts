@@ -1,6 +1,8 @@
+import { StyledComponent } from '@emotion/styled';
 import { Box, styled, colors, alpha } from '@mui/material';
+import React from 'react';
 
-export const TiltContent = styled(Box)(({ theme }) => ({
+export const TiltContent: StyledComponent<{ sx: any; children: React.ReactNode }> = styled(Box)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',

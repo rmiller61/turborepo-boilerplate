@@ -19,6 +19,6 @@
     "update-dependencies": "npx npm-check-updates -u"
   },
   "devDependencies": {
-    "config-tsconfig": "*"
+    "config-tsconfig": "workspace:*"
   }
 }

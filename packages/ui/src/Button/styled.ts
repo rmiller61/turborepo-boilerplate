@@ -1,9 +1,11 @@
-import { Button, styled } from '@mui/material';
+import { StyledComponent } from '@emotion/styled';
+import { Button } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import { shouldForwardProp } from 'utils-mui';
 
 import { ButtonProps } from './';
 
-export const ButtonStyled: unknown = styled(Button, {
+export const ButtonStyled: StyledComponent<ButtonProps> = styled(Button, {
   shouldForwardProp: (prop) => shouldForwardProp<ButtonProps>(['isDisabled', 'bgColor'], prop),
 })<ButtonProps>(({ theme, isDisabled, size, bgColor }) => ({
   width: isDisabled ? '100%' : undefined,

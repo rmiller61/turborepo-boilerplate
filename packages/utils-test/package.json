@@ -16,9 +16,9 @@
     "update-dependencies": "npx npm-check-updates -u"
   },
   "dependencies": {
-    "config-mui": "*"
+    "config-mui": "workspace:*"
   },
   "devDependencies": {
-    "config-tsconfig": "*"
+    "config-tsconfig": "workspace:*"
   }
 }

@@ -16,7 +16,9 @@ importers:
       '@storybook/addon-interactions': 6.5.15
       '@storybook/addon-links': 6.5.15
       '@storybook/addon-postcss': 2.0.0
+      '@storybook/addons': ^6.5.15
       '@storybook/builder-webpack5': 6.5.15
+      '@storybook/core-common': ^6.5.15
       '@storybook/manager-webpack5': 6.5.15
       '@storybook/react': 6.5.15
       '@storybook/theming': 6.5.15
@@ -35,6 +37,7 @@ importers:
       date-fns: 2.29.3
       eslint-config-base: workspace:*
       husky: 8.0.3
+      jest: 29.3.1
       lint-staged: 13.1.0
       next: 13.1.2
       prettier: 2.8.2
@@ -73,7 +76,9 @@ importers:
       '@storybook/addon-interactions': 6.5.15_ezwba6lrfsfjf3koi7rmjevpvq
       '@storybook/addon-links': 6.5.15_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-postcss': 2.0.0
+      '@storybook/addons': 6.5.15_biqbaboplfbrettd7655fr4n2y
       '@storybook/builder-webpack5': 6.5.15_o4scbtliisanygemawej7x2d6i
+      '@storybook/core-common': 6.5.15_o4scbtliisanygemawej7x2d6i
       '@storybook/manager-webpack5': 6.5.15_o4scbtliisanygemawej7x2d6i
       '@storybook/react': 6.5.15_vhwqry4max6627izwp5cp2rqwi
       '@storybook/theming': 6.5.15_biqbaboplfbrettd7655fr4n2y
@@ -88,11 +93,12 @@ importers:
       config-tsconfig: link:packages/config-tsconfig
       eslint-config-base: link:packages/config-eslint
       husky: 8.0.3
+      jest: 29.3.1_zfha7dvnw4nti6zkbsmhmn6xo4
       lint-staged: 13.1.0
       prettier: 2.8.2
       pretty-quick: 3.1.3_prettier@2.8.2
       shx: 0.3.4
-      ts-jest: 29.0.5_typescript@4.9.4
+      ts-jest: 29.0.5_p6ekqnroyms5nhqbfxosryz7rm
       ts-node: 10.9.1_awa2wsr5thmg3i7jqycphctjfq
       tsup: 6.5.0_z6wznmtyb6ovnulj6iujpct7um
       turbo: 1.7.0
@@ -101,50 +107,50 @@ importers:
   apps/boilerplate-app:
     specifiers:
       chalk: 5.2.0
-      config-mui: '*'
-      config-storybook: '*'
-      config-tsconfig: '*'
-      eslint-config-base: '*'
+      config-mui: workspace:*
+      config-storybook: workspace:*
+      config-tsconfig: workspace:*
+      eslint-config-base: workspace:*
       openapi-typescript: 6.1.0
       react-parallax-tilt: 1.7.88
-      ui: '*'
-      utils-mui: '*'
-      utils-test: '*'
-      utils-version: '*'
+      ui: workspace:*
+      utils-mui: workspace:*
+      utils-test: workspace:*
+      utils-version: workspace:*
     dependencies:
       config-mui: link:../../packages/config-mui
       react-parallax-tilt: 1.7.88
-      ui: 0.2.4
+      ui: link:../../packages/ui
       utils-mui: link:../../packages/utils-mui
       utils-version: link:../../packages/utils-version
     devDependencies:
       chalk: 5.2.0
       config-storybook: link:../../packages/config-storybook
       config-tsconfig: link:../../packages/config-tsconfig
-      eslint-config-base: 1.0.0
+      eslint-config-base: link:../../packages/config-eslint
       openapi-typescript: 6.1.0
-      utils-test: 0.2.2
+      utils-test: link:../../packages/utils-test
 
   apps/boilerplate-website:
     specifiers:
-      config-mui: '*'
-      config-storybook: '*'
-      config-tsconfig: '*'
-      eslint-config-base: '*'
-      ui: '*'
-      utils-mui: '*'
-      utils-test: '*'
-      utils-version: '*'
+      config-mui: workspace:*
+      config-storybook: workspace:*
+      config-tsconfig: workspace:*
+      eslint-config-base: workspace:*
+      ui: workspace:*
+      utils-mui: workspace:*
+      utils-test: workspace:*
+      utils-version: workspace:*
     dependencies:
       config-mui: link:../../packages/config-mui
-      ui: 0.2.4
+      ui: link:../../packages/ui
       utils-mui: link:../../packages/utils-mui
       utils-version: link:../../packages/utils-version
     devDependencies:
       config-storybook: link:../../packages/config-storybook
       config-tsconfig: link:../../packages/config-tsconfig
-      eslint-config-base: 1.0.0
-      utils-test: 0.2.2
+      eslint-config-base: link:../../packages/config-eslint
+      utils-test: link:../../packages/utils-test
 
   packages/config-eslint:
     specifiers:
@@ -201,7 +207,7 @@ importers:
 
   packages/config-storybook:
     specifiers:
-      config-mui: '*'
+      config-mui: workspace:*
     dependencies:
       config-mui: link:../config-mui
 
@@ -210,12 +216,12 @@ importers:
 
   packages/ui:
     specifiers:
-      config-mui: '*'
-      config-storybook: '*'
-      config-tsconfig: '*'
-      utils-mui: '*'
-      utils-test: '*'
-      utils-version: '*'
+      config-mui: workspace:*
+      config-storybook: workspace:*
+      config-tsconfig: workspace:*
+      utils-mui: workspace:*
+      utils-test: workspace:*
+      utils-version: workspace:*
     dependencies:
       config-mui: link:../config-mui
       utils-mui: link:../utils-mui
@@ -223,12 +229,12 @@ importers:
     devDependencies:
       config-storybook: link:../config-storybook
       config-tsconfig: link:../config-tsconfig
-      utils-test: 0.2.2
+      utils-test: link:../utils-test
 
   packages/utils-mui:
     specifiers:
       '@emotion/cache': ^11.10.5
-      config-tsconfig: '*'
+      config-tsconfig: workspace:*
     dependencies:
       '@emotion/cache': 11.10.5
     devDependencies:
@@ -236,8 +242,8 @@ importers:
 
   packages/utils-test:
     specifiers:
-      config-mui: '*'
-      config-tsconfig: '*'
+      config-mui: workspace:*
+      config-tsconfig: workspace:*
     dependencies:
       config-mui: link:../config-mui
     devDependencies:
@@ -245,7 +251,7 @@ importers:
 
   packages/utils-version:
     specifiers:
-      config-tsconfig: '*'
+      config-tsconfig: workspace:*
     devDependencies:
       config-tsconfig: link:../config-tsconfig
 
@@ -1013,7 +1019,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.12.9
-      '@babel/helper-plugin-utils': 7.10.4
+      '@babel/helper-plugin-utils': 7.20.2
       '@babel/plugin-syntax-object-rest-spread': 7.8.3_@babel+core@7.12.9
       '@babel/plugin-transform-parameters': 7.20.7_@babel+core@7.12.9
     dev: true
@@ -3354,6 +3360,49 @@ packages:
       graceful-fs: 4.2.10
       jest-changed-files: 29.2.0
       jest-config: 29.3.1_@types+node@18.11.18
+      jest-haste-map: 29.3.1
+      jest-message-util: 29.3.1
+      jest-regex-util: 29.2.0
+      jest-resolve: 29.3.1
+      jest-resolve-dependencies: 29.3.1
+      jest-runner: 29.3.1
+      jest-runtime: 29.3.1
+      jest-snapshot: 29.3.1
+      jest-util: 29.3.1
+      jest-validate: 29.3.1
+      jest-watcher: 29.3.1
+      micromatch: 4.0.5
+      pretty-format: 29.3.1
+      slash: 3.0.0
+      strip-ansi: 6.0.1
+    transitivePeerDependencies:
+      - supports-color
+      - ts-node
+    dev: true
+
+  /@jest/core/29.3.1_ts-node@10.9.1:
+    resolution:
+      { integrity: sha512-0ohVjjRex985w5MmO5L3u5GR1O30DexhBSpuwx2P+9ftyqHdJXnk7IUWiP80oHMvt7ubHCJHxV0a0vlKVuZirw== }
+    engines: { node: ^14.15.0 || ^16.10.0 || >=18.0.0 }
+    peerDependencies:
+      node-notifier: ^8.0.1 || ^9.0.0 || ^10.0.0
+    peerDependenciesMeta:
+      node-notifier:
+        optional: true
+    dependencies:
+      '@jest/console': 29.3.1
+      '@jest/reporters': 29.3.1
+      '@jest/test-result': 29.3.1
+      '@jest/transform': 29.3.1
+      '@jest/types': 29.3.1
+      '@types/node': 18.11.18
+      ansi-escapes: 4.3.2
+      chalk: 4.1.2
+      ci-info: 3.7.1
+      exit: 0.1.2
+      graceful-fs: 4.2.10
+      jest-changed-files: 29.2.0
+      jest-config: 29.3.1_zfha7dvnw4nti6zkbsmhmn6xo4
       jest-haste-map: 29.3.1
       jest-message-util: 29.3.1
       jest-regex-util: 29.2.0
@@ -5980,11 +6029,6 @@ packages:
       { integrity: sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA== }
     dev: true
 
-  /@types/node/9.6.61:
-    resolution:
-      { integrity: sha512-/aKAdg5c8n468cYLy2eQrcR5k6chlbNwZNGUj3TboyPa2hcO2QAJcfymlqPzMiRj8B6nYKXjzQz36minFE0RwQ== }
-    dev: true
-
   /@types/normalize-package-data/2.4.1:
     resolution:
       { integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw== }
@@ -7794,7 +7838,7 @@ packages:
       mississippi: 3.0.0
       mkdirp: 0.5.6
       move-concurrently: 1.0.1
-      promise-inflight: 1.0.1_bluebird@3.7.2
+      promise-inflight: 1.0.1
       rimraf: 2.7.1
       ssri: 6.0.2
       unique-filename: 1.1.1
@@ -9773,13 +9817,6 @@ packages:
       optionator: 0.8.3
     optionalDependencies:
       source-map: 0.6.1
-    dev: true
-
-  /eslint-config-base/1.0.0:
-    resolution:
-      { integrity: sha512-bhMfvhajMURYRoNAZCC7w9rzUfGtSvN6Y8Ev9EA6Cv1Vdn1zAFZDD+dsXSFYmPwOTg/kPPlVHmvmL7UbOoIixw== }
-    dependencies:
-      lodash: 4.17.21
     dev: true
 
   /eslint-config-prettier/8.6.0_eslint@8.31.0:
@@ -12538,6 +12575,35 @@ packages:
       - ts-node
     dev: true
 
+  /jest-cli/29.3.1_zfha7dvnw4nti6zkbsmhmn6xo4:
+    resolution:
+      { integrity: sha512-TO/ewvwyvPOiBBuWZ0gm04z3WWP8TIK8acgPzE4IxgsLKQgb377NYGrQLc3Wl/7ndWzIH2CDNNsUjGxwLL43VQ== }
+    engines: { node: ^14.15.0 || ^16.10.0 || >=18.0.0 }
+    hasBin: true
+    peerDependencies:
+      node-notifier: ^8.0.1 || ^9.0.0 || ^10.0.0
+    peerDependenciesMeta:
+      node-notifier:
+        optional: true
+    dependencies:
+      '@jest/core': 29.3.1_ts-node@10.9.1
+      '@jest/test-result': 29.3.1
+      '@jest/types': 29.3.1
+      chalk: 4.1.2
+      exit: 0.1.2
+      graceful-fs: 4.2.10
+      import-local: 3.1.0
+      jest-config: 29.3.1_zfha7dvnw4nti6zkbsmhmn6xo4
+      jest-util: 29.3.1
+      jest-validate: 29.3.1
+      prompts: 2.4.2
+      yargs: 17.6.2
+    transitivePeerDependencies:
+      - '@types/node'
+      - supports-color
+      - ts-node
+    dev: true
+
   /jest-config/29.3.1:
     resolution:
       { integrity: sha512-y0tFHdj2WnTEhxmGUK1T7fgLen7YK4RtfvpLFBXfQkh2eMJAQq24Vx9472lvn5wg0MAO6B+iPfJfzdR9hJYalg== }
@@ -12613,6 +12679,47 @@ packages:
       pretty-format: 29.3.1
       slash: 3.0.0
       strip-json-comments: 3.1.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /jest-config/29.3.1_zfha7dvnw4nti6zkbsmhmn6xo4:
+    resolution:
+      { integrity: sha512-y0tFHdj2WnTEhxmGUK1T7fgLen7YK4RtfvpLFBXfQkh2eMJAQq24Vx9472lvn5wg0MAO6B+iPfJfzdR9hJYalg== }
+    engines: { node: ^14.15.0 || ^16.10.0 || >=18.0.0 }
+    peerDependencies:
+      '@types/node': '*'
+      ts-node: '>=9.0.0'
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      ts-node:
+        optional: true
+    dependencies:
+      '@babel/core': 7.20.12
+      '@jest/test-sequencer': 29.3.1
+      '@jest/types': 29.3.1
+      '@types/node': 18.11.18
+      babel-jest: 29.3.1_@babel+core@7.20.12
+      chalk: 4.1.2
+      ci-info: 3.7.1
+      deepmerge: 4.2.2
+      glob: 7.2.3
+      graceful-fs: 4.2.10
+      jest-circus: 29.3.1
+      jest-environment-node: 29.3.1
+      jest-get-type: 29.2.0
+      jest-regex-util: 29.2.0
+      jest-resolve: 29.3.1
+      jest-runner: 29.3.1
+      jest-util: 29.3.1
+      jest-validate: 29.3.1
+      micromatch: 4.0.5
+      parse-json: 5.2.0
+      pretty-format: 29.3.1
+      slash: 3.0.0
+      strip-json-comments: 3.1.1
+      ts-node: 10.9.1_awa2wsr5thmg3i7jqycphctjfq
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -13045,6 +13152,27 @@ packages:
       '@jest/types': 29.3.1
       import-local: 3.1.0
       jest-cli: 29.3.1
+    transitivePeerDependencies:
+      - '@types/node'
+      - supports-color
+      - ts-node
+    dev: true
+
+  /jest/29.3.1_zfha7dvnw4nti6zkbsmhmn6xo4:
+    resolution:
+      { integrity: sha512-6iWfL5DTT0Np6UYs/y5Niu7WIfNv/wRTtN5RSXt2DIEft3dx3zPuw/3WJQBCJfmEzvDiEKwoqMbGD9n49+qLSA== }
+    engines: { node: ^14.15.0 || ^16.10.0 || >=18.0.0 }
+    hasBin: true
+    peerDependencies:
+      node-notifier: ^8.0.1 || ^9.0.0 || ^10.0.0
+    peerDependenciesMeta:
+      node-notifier:
+        optional: true
+    dependencies:
+      '@jest/core': 29.3.1_ts-node@10.9.1
+      '@jest/types': 29.3.1
+      import-local: 3.1.0
+      jest-cli: 29.3.1_zfha7dvnw4nti6zkbsmhmn6xo4
     transitivePeerDependencies:
       - '@types/node'
       - supports-color
@@ -15346,18 +15474,6 @@ packages:
         optional: true
     dev: true
 
-  /promise-inflight/1.0.1_bluebird@3.7.2:
-    resolution:
-      { integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g== }
-    peerDependencies:
-      bluebird: '*'
-    peerDependenciesMeta:
-      bluebird:
-        optional: true
-    dependencies:
-      bluebird: 3.7.2
-    dev: true
-
   /promise.allsettled/1.0.6:
     resolution:
       { integrity: sha512-22wJUOD3zswWFqgwjNHa1965LvqTX87WPu/lreY2KSd7SVcERfuZ4GfUaOnJNnvtoIv2yXT/W00YIGMetXtFXg== }
@@ -16768,11 +16884,6 @@ packages:
     engines: { node: '>= 0.8' }
     dev: true
 
-  /std/0.1.40:
-    resolution:
-      { integrity: sha512-wUf57hkDGCoVShrhPA8Q7lAg2Qosk+FaMlECmAsr1A4/rL2NRXFHQGBcgMUFKVkPEemJFW9gzjCQisRty14ohg== }
-    dev: false
-
   /stop-iteration-iterator/1.0.0:
     resolution:
       { integrity: sha512-iCGQj+0l0HOdZ2AEeBADlsRC+vsnDsZsbdSiH1yNSjcfKM7fdpCMfqAL/dwF5BLiw/XhRft/Wax6zQbhq2BcjQ== }
@@ -17537,7 +17648,7 @@ packages:
       yargs-parser: 21.1.1
     dev: true
 
-  /ts-jest/29.0.5_typescript@4.9.4:
+  /ts-jest/29.0.5_p6ekqnroyms5nhqbfxosryz7rm:
     resolution:
       { integrity: sha512-PL3UciSgIpQ7f6XjVOmbi96vmDHUqAyqDr8YxzopDqX3kfgYtX1cuNeBjP+L9sFXi6nzsGGA6R3fP3DDDJyrxA== }
     engines: { node: ^14.15.0 || ^16.10.0 || >=18.0.0 }
@@ -17561,6 +17672,7 @@ packages:
     dependencies:
       bs-logger: 0.2.6
       fast-json-stable-stringify: 2.1.0
+      jest: 29.3.1_zfha7dvnw4nti6zkbsmhmn6xo4
       jest-util: 29.3.1
       json5: 2.2.3
       lodash.memoize: 4.1.2
@@ -17851,13 +17963,6 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
-
-  /ui/0.2.4:
-    resolution:
-      { integrity: sha512-se2D+frb/i6JwFc7j72IEa0JADF8lfgc6ivOigaYkXHOuZRBtWe8R7UZ2YiXcbJ1dYNsjq40dn39rlNRxmVdPw== }
-    dependencies:
-      std: 0.1.40
-    dev: false
 
   /unbox-primitive/1.0.2:
     resolution:
@@ -18166,17 +18271,6 @@ packages:
     resolution:
       { integrity: sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA== }
     engines: { node: '>= 0.4.0' }
-    dev: true
-
-  /utils-test/0.2.2:
-    resolution:
-      { integrity: sha512-0/fX+ORci5E46OxPumgQ4WX1RMwokM7iwWFQZ94DKJ4KFqJnPjTaTLKHRQf1pEp7F3rUAbtjs1Ek/ulHN/KNXQ== }
-    peerDependencies:
-      '@angular/common': '>=5.0.0'
-      '@angular/core': '>=5.0.0'
-      rxjs: '>=5.0.0'
-    dependencies:
-      '@types/node': 9.6.61
     dev: true
 
   /uuid-browser/3.1.0:
