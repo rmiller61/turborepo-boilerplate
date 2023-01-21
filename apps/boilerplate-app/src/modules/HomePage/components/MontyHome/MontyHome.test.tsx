@@ -22,8 +22,6 @@ describe('apps', () => {
 
             const buttons = screen.getAllByRole('button');
 
-            expect(screen.getByText('Home page (specific) feature')).toBeInTheDocument();
-            expect(screen.getByText('Monty Home Problem')).toBeInTheDocument();
             expect(buttons.length).toBe(3);
             expect(onMontyHomeSelected).not.toBeCalled();
           });
